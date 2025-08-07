@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             checkMatch();
         }
     }
-
     function checkMatch() {
         lockBoard = true;
         const [card1, card2] = flippedCards;
@@ -98,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }
     }
-
-
     function updateScore() {
         movesDisplay.textContent = moves;
         matchesDisplay.textContent = matches;
