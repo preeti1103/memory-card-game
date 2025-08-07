@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let moves = 0;
     let matches = 0;
 
-    createParticles();
-
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -112,22 +110,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the game
     createBoard();
 });
-
-// Create floating particles
-function createParticles() {
-    const particles = 30;
-    for (let i = 0; i < particles; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        document.body.appendChild(particle);
-
-        // Randomize position/size
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.width = `${Math.random() * 5 + 2}px`;
-        particle.style.height = particle.style.width;
-
-        // Animate
-        particle.style.animation = `float ${Math.random() * 20 + 10}s linear infinite`;
-    }
-}
